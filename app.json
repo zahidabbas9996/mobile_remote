@@ -12,9 +12,7 @@
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "supportsTablet": true
-    },
+    "ios": { "supportsTablet": true },
     "android": {
       "package": "com.zahidabbas9996.mobileremote",
       "adaptiveIcon": {
@@ -22,29 +20,20 @@
         "backgroundColor": "#ffffff"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+    "web": { "favicon": "./assets/favicon.png" },
     "plugins": [
-      [
-        "@config-plugins/react-native-webrtc",
-        {
-          "cameraPermission": "Allow Mobile Remote to use camera",
-          "microphonePermission": "Allow Mobile Remote to use microphone"
+      ["@config-plugins/react-native-webrtc", {
+        "cameraPermission": "Allow Mobile Remote to use camera",
+        "microphonePermission": "Allow Mobile Remote to use microphone"
+      }],
+      ["expo-build-properties", {
+        "android": {
+          "minSdkVersion": 24,
+          "compileSdkVersion": 35,
+          "targetSdkVersion": 35,
+          "kotlinVersion": "2.2.0"
         }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "minSdkVersion": 24,
-            "compileSdkVersion": 35,
-            "targetSdkVersion": 35,
-            "kotlinVersion": "2.1.0",
-            "extraMavenRepos": ["https://www.jitpack.io"]
-          }
-        }
-      ]
+      }]
     ]
   }
 }
