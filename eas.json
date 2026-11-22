@@ -1,24 +1,18 @@
 {
   "cli": {
-    "version": ">= 27.10.0",
-    "appVersionSource": "local"
+    "version": ">= 16.0.0",
+    "appVersionSource": "remote"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
     "preview": {
       "distribution": "internal",
       "android": {
         "buildType": "apk"
+      },
+      "node": "22.13.0",
+      "env": {
+        "EAS_SKIP_AUTO_FINGERPRINT": "1"
       }
-    },
-    "production": {
-      "autoIncrement": true
     }
-  },
-  "submit": {
-    "production": {}
   }
 }
