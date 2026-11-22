@@ -6,49 +6,45 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.zahidabbas.mobile_remote"
+      "supportsTablet": true
     },
     "android": {
-      "package": "com.zahidabbas.mobile_remote",
+      "package": "com.zahidabbas9996.mobileremote",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "permissions": [
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO",
-        "android.permission.MODIFY_AUDIO_SETTINGS",
-        "android.permission.ACCESS_NETWORK_STATE"
-      ]
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "@config-plugins/react-native-webrtc",
+      [
+        "@config-plugins/react-native-webrtc",
+        {
+          "cameraPermission": "Allow Mobile Remote to use camera",
+          "microphonePermission": "Allow Mobile Remote to use microphone"
+        }
+      ],
       [
         "expo-build-properties",
         {
           "android": {
-            "enableProguardInReleaseBuilds": false,
-            "enableShrinkResourcesInReleaseBuilds": false,
-            "minifyEnabled": false
+            "minSdkVersion": 24,
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "kotlinVersion": "2.1.0",
+            "extraMavenRepos": ["https://www.jitpack.io"]
           }
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "cd5f70d2-8108-411c-b93b-c63eccfcba52"
-      }
-    }
+    ]
   }
 }
