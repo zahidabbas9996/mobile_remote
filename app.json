@@ -6,19 +6,11 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "assetBundlePatterns": ["**/*"],
     "ios": { "supportsTablet": true },
     "android": {
       "package": "com.zahidabbas9996.mobileremote",
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#ffffff" }
     },
     "web": { "favicon": "./assets/favicon.png" },
     "plugins": [
@@ -27,12 +19,13 @@
         "microphonePermission": "Allow Mobile Remote to use microphone"
       }],
       ["expo-build-properties", {
-        "android": {
-          "minSdkVersion": 24,
-          "compileSdkVersion": 35,
-          "targetSdkVersion": 35,
-          "kotlinVersion": "2.2.0"
-        }
+        "android": { "minSdkVersion": 24 }
+      }],
+      ["expo-splash-screen", {
+        "image": "./assets/splash-icon.png",
+        "imageWidth": 200,
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
       }]
     ]
   }
